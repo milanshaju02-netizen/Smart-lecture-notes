@@ -50,7 +50,7 @@ torch.set_num_threads(4)
 print("Loading Whisper model...")
 
 whisper_model = WhisperModel(
-    "base",
+    "tiny",
     device="cpu",
     compute_type="int8"
 )
@@ -351,7 +351,7 @@ def process():
 # ==============================
 # RUN SERVER
 # ==============================
-
 if __name__ == "__main__":
     print("Starting AI Lecture Notes Server...")
-    app.run(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port, debug=False)
