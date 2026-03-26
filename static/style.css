@@ -1,0 +1,205 @@
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+color: white;
+background: radial-gradient(circle at top left,#1a1a40,#0f0c29);
+}
+
+/* NAVBAR */
+.navbar {
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
+}
+
+.nav-links a {
+margin:0 15px;
+color:#ccc;
+text-decoration:none;
+}
+
+.nav-links button {
+background:linear-gradient(90deg,#7b2ff7,#f107a3);
+border:none;
+padding:10px 22px;
+border-radius:25px;
+color:white;
+cursor:pointer;
+}
+
+/* HERO */
+.hero {
+padding:140px 10%;
+text-align:center;
+}
+
+.hero h1 {
+font-size:52px;
+max-width:800px;
+margin:auto;
+}
+
+.hero span {
+background:linear-gradient(90deg,#9f5afd,#ff4ecd);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.primary-btn {
+margin-top:30px;
+background:linear-gradient(90deg,#7b2ff7,#f107a3);
+border:none;
+padding:14px 35px;
+border-radius:30px;
+color:white;
+cursor:pointer;
+box-shadow:0 0 25px rgba(241,7,163,0.6);
+}
+
+.primary-btn:hover {
+transform:scale(1.05);
+}
+
+.full-width {
+width:100%;
+}
+
+/* STEPS */
+.how-section {
+padding:100px 10%;
+text-align:center;
+}
+
+.steps {
+display:flex;
+justify-content:space-between;
+}
+
+.step {
+width:22%;
+}
+
+.circle {
+width:70px;
+height:70px;
+border-radius:50%;
+background:linear-gradient(45deg,#7b2ff7,#f107a3);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+margin:auto;
+box-shadow:0 0 25px rgba(241,7,163,0.6);
+}
+
+/* UPLOAD */
+.upload-section {
+padding:120px 10%;
+text-align:center;
+}
+
+.upload-card {
+background:rgba(255,255,255,0.05);
+padding:60px;
+border-radius:25px;
+backdrop-filter:blur(20px);
+width:500px;
+margin:auto;
+}
+
+.file-upload {
+display:block;
+padding:25px;
+border:2px dashed #9f5afd;
+border-radius:20px;
+cursor:pointer;
+margin-bottom:20px;
+}
+
+.file-upload input {
+display:none;
+}
+
+/* LANGUAGE SELECT */
+.language-box {
+margin:20px 0;
+text-align:left;
+}
+
+.language-box label {
+font-size:14px;
+display:block;
+margin-bottom:8px;
+color:#ccc;
+}
+
+.language-box select {
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+background:#1e1e3f;
+color:white;
+font-size:15px;
+}
+
+/* PROGRESS */
+#loading-overlay {
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+z-index:9999;
+align-items:center;
+justify-content:center;
+}
+
+.progress-box {
+width:400px;
+text-align:center;
+}
+
+.progress-bar {
+width:100%;
+height:10px;
+background:#222;
+border-radius:10px;
+overflow:hidden;
+margin:20px 0;
+}
+
+.progress-fill {
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#7b2ff7,#f107a3);
+transition:width 0.3s;
+}
+
+/* FAQ */
+.faq-section {
+padding:100px 10%;
+}
+
+.faq-item {
+background:rgba(255,255,255,0.05);
+padding:15px;
+margin:15px 0;
+border-radius:12px;
+cursor:pointer;
+}
+
+.faq-answer {
+display:none;
+margin-top:10px;
+}
+
+footer {
+text-align:center;
+padding:50px;
+opacity:0.7;
+}

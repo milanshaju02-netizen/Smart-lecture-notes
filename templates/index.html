@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoteGen AI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+    <div class="logo">⚡ SMART LECTURE NOTES</div>
+    <div class="nav-links">
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <button onclick="scrollToUpload()">Start Now</button>
+    </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>The Smartest Way to Turn <span>Lecture Audio</span> Into Notes</h1>
+        <p>AI-powered transcription and intelligent note generation in seconds.</p>
+        <button class="primary-btn" onclick="scrollToUpload()">Generate Notes Now</button>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section id="how" class="how-section">
+    <h2>How It Works</h2>
+    <div class="steps">
+
+```
+    <div class="step">
+        <div class="circle"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Upload</h3>
+        <p>Upload your lecture audio file.</p>
+    </div>
+
+    <div class="step">
+        <div class="circle"><i class="fa-solid fa-brain"></i></div>
+        <h3>AI Processing</h3>
+        <p>Transcription & smart extraction.</p>
+    </div>
+
+    <div class="step">
+        <div class="circle"><i class="fa-solid fa-file-lines"></i></div>
+        <h3>Structured Notes</h3>
+        <p>Formatted academic notes generated.</p>
+    </div>
+
+    <div class="step">
+        <div class="circle"><i class="fa-solid fa-download"></i></div>
+        <h3>Download</h3>
+        <p>Instant PDF export.</p>
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- UPLOAD -->
+
+<section id="upload-section" class="upload-section">
+
+```
+<div class="upload-card">
+    <h2>Upload Lecture</h2>
+
+    <form id="uploadForm" action="/process" method="POST" enctype="multipart/form-data">
+
+        <!-- FILE UPLOAD -->
+        <label class="file-upload">
+            <input type="file" id="audio-upload" name="audio" required>
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span id="file-name">Choose Lecture File</span>
+        </label>
+
+        <!-- LANGUAGE SELECT -->
+        <div class="language-box">
+
+            <label for="language">
+                <i class="fa-solid fa-language"></i>
+                Generate Notes Language
+            </label>
+
+            <select name="language" id="language" required>
+
+                <option value="en">English</option>
+                <option value="ml">Malayalam</option>
+                <option value="hi">Hindi</option>
+
+            </select>
+
+        </div>
+
+        <!-- GENERATE BUTTON -->
+        <button type="submit" class="primary-btn full-width">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Generate Notes
+        </button>
+
+    </form>
+
+</div>
+```
+
+</section>
+
+<!-- PROGRESS OVERLAY -->
+
+<div id="loading-overlay">
+    <div class="progress-box">
+        <h3>AI is Generating Notes...</h3>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p id="progress-text">Initializing AI...</p>
+    </div>
+</div>
+
+<!-- FAQ -->
+
+<section id="faq" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+```
+<div class="faq-item">
+    <div class="faq-question">Is this free?</div>
+    <div class="faq-answer">Yes. It runs locally on your system.</div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">Does it support Malayalam?</div>
+    <div class="faq-answer">Yes. Faster Whisper supports Malayalam.</div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question">Is my data uploaded anywhere?</div>
+    <div class="faq-answer">No. Everything runs locally.</div>
+</div>
+```
+
+</section>
+
+<footer>
+© 2026 NoteGen AI | Built with Flask + Faster Whisper
+</footer>
+
+</body>
+</html>
