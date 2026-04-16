@@ -1,12 +1,25 @@
-venv/
-uploads/
-output/
-outputs/
-*.mp3
-*.wav
-*.m4a
+# Python
 __pycache__/
 *.pyc
+
+# Virtual Environment
+venv/
+env/
+
+# Uploads & Outputs
+uploads/
+output/
+
+# Audio files (VERY IMPORTANT)
+*.mp3
+*.wav
+
+# System files
 desktop.ini
-lecture_malayalam.txt
-tokenizers/
+.DS_Store
+
+# Logs
+*.log
+
+# Environment variables
+.env/
